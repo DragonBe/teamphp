@@ -10,27 +10,13 @@
 	<div class="span2">Super Left side.</div>
 	<div class="span5">
 		<?php
-		$tweets = array ();
-		$tweets [] = array (
-				'user_id' => 'abc',
-				'message' => "blah"
-		);
-		$tweets [] = array (
-				'user_id' => 'abc',
-				'message' => "blah"
-		);
-		$tweets [] = array (
-				'user_id' => 'abc',
-				'message' => "blah"
-		);
-		$tweets [] = array (
-				'user_id' => 'abc',
-				'message' => "blah"
-		);
-
-		echo $this->partial ( 'partials/tweet_block.phtml', array (
-				'tweets' => $tweets
-		) );
+		if (isset ( $this->tweets ) && is_array ( $this->tweets )) {
+			echo $this->partial ( 'partials/tweet_block.phtml', array (
+					'tweets' => $this->tweets
+			) );
+		} else {
+			echo "no tweets to display,";
+		}
 		?>
 	</div>
 	<div class="span5">
