@@ -9,4 +9,17 @@ class Account_Model_AccountMapper extends In2it_Model_Mapper
         }
         return parent::getDbTable();
     }
+    
+    public function save(In2it_Model_Model $account)
+    {
+        $checkModel = new Account_Model_Account();
+        $this->fetchRow($checkModel, array (
+            'twitterId = ?' => $account->getTwitterId(),
+            'twitterName = ?' => $account->getTwitterName(),
+        ));
+        if (null !== $checkModel) {
+            $account->setId($checkModel->getId());
+        }
+        parent::save($account);
+    }
 }
