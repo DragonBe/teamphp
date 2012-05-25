@@ -10,7 +10,7 @@
 	<div class="span2">Super Left side.</div>
 	<div class="span5">
 		<?php
-		if (isset ( $this->tweets ) && is_array ( $this->tweets )) {
+		if (isset ( $this->tweets )) {
 			echo $this->partial ( 'partials/tweet_block.phtml', array (
 					'tweets' => $this->tweets
 			) );

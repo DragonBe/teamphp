@@ -51,7 +51,7 @@ class Account_IndexController extends Zend_Controller_Action
         $accountModel->parseToken($token);
         $accountMapper->save($accountModel);
         
-        return $this->_helper->redirector('show-account', 'index', 'account');
+        return $this->_helper->redirector('internal', 'index', 'default');
     }
 
     public function showAccountAction()
@@ -71,7 +71,7 @@ class Account_IndexController extends Zend_Controller_Action
             'accessToken' => $token,
         ), $consumer);
         $timeLine = $twitter->statusUserTimeline(array ('user_id' => $token->getParam('user_id')));
-        var_dump($timeLine);
+        $this->view->timeLine = $timeLine;
     }
 
 

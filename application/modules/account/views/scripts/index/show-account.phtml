@@ -1,4 +1,15 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Index</b> and script/action name <b>showAccount</b></p>
-</div>
+
+<?php var_dump($this->timeLine); ?>
+
+<table>
+
+<?php foreach ($this->timeLine as $status): ?>
+
+    <tr>
+        <td><?php echo $this->escape($status->text) ?></td>
+    </tr>
+
+<?php endforeach; ?>
+
+
+</table>
