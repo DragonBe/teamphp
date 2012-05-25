@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Application build" default="build">
+    <property file="build.properties"/>
+    <property file="local.properties" override="true" />
+
+    <fileset dir="${project.basedir}" id="phpfiles">
+        <include name="application/**/*.php" />
+        <include name="library/In2it/**/*.php" />
+    </fileset>
+    
+    <target name="prepare" description="Clean up the build path">
+        <delete dir="${project.basedir}/build" quiet="true" />
+        <mkdir dir="${project.basedir}/build" />
+		<mkdir dir="${project.basedir}/build/docs" />
+        <mkdir dir="${project.basedir}/build/logs" />
+        <mkdir dir="${project.basedir}/build/coverage" />
+        <mkdir dir="${project.basedir}/build/pdepend" />
+        <mkdir dir="${project.basedir}/build/browser" />
+        <!-- for some reason on the server it won't run without a touch -->
+        <touch file="${project.basedir}/build/logs/checkstyle.xml" />
+    </target>
+    
+    <target name="phplint" description="Validating PHP Syntax">
+        <phplint haltonfailure="true">
+            <fileset refid="phpfiles" />
+        </phplint>
+    </target>
+
+    <target name="phpunit" description="Running unit tests against the source code">
+        <exec 
+            command="/usr/bin/phpunit --coverage-html ${project.basedir}/build/coverage --coverage-clover ${project.basedir}/build/logs/clover.xml --log-junit ${project.basedir}/build/logs/junit.xml"
+            dir="${project.basedir}/tests" 
+            passthru="true" />
+    </target>
+    
+    <target name="phpdoc2" description="Generating automated documentation with PHPDoc2">
+        <property name="doc.title" value="${project.title} API Documentation"/>
+        <exec
+            command="/usr/bin/phpdoc -d application/,library/In2it -e php -t ${project.basedir}/build/docs --title=&quot;${doc.title}&quot;"
+            dir="${project.basedir}"
+            passthru="true" />
+        <!--phpdoc2 
+                    title="${project.title}"
+                    testdir="${project.basedir}/build/docs"
+                    template="responsive">
+                    <fileset refid="phpfiles" />
+        </phpdoc2-->
+    </target>
+
+    <target name="phpcs" description="Validate code with PHP CodeSniffer">
+        <exec
+            command="/usr/bin/phpcs --report=checkstyle --report-file=${project.basedir}/build/logs/checkstyle.xml --standard=Zend --extensions=php application library/In2it"
+            dir="${project.basedir}"
+            passthru="true" />
+    </target>
+
+    <target name="phpcpd" description="Detect copy/paste with PHPCPD">
+        <phpcpd>
+            <fileset refid="phpfiles" />
+            <formatter type="pmd" outfile="${project.basedir}/build/logs/pmd-cpd.xml" />
+        </phpcpd>
+    </target>
+
+    <target name="phpmd" description="Mess detection with PHPMD">
+        <phpmd>
+            <fileset refid="phpfiles" />
+            <formatter type="xml" outfile="${project.basedir}/build/logs/pmd.xml" />
+        </phpmd>
+    </target>
+
+    <target name="pdepend" description="Dependency calculations with PDepend">
+        <phpdepend>
+            <fileset refid="phpfiles" />
+            <logger type="jdepend-xml" outfile="${project.basedir}/build/logs/jdepend.xml" />
+            <logger type="phpunit-xml" outfile="${project.basedir}/build/logs/phpunit.xml" />
+            <logger type="summary-xml" outfile="${project.basedir}/build/logs/pdepend-summary.xml" />
+            <logger type="jdepend-chart" outfile="${project.basedir}/build/pdepend/pdepend.svg" />
+            <logger type="overview-pyramid" outfile="${project.basedir}/build/pdepend/pyramid.svg" />
+        </phpdepend>
+    </target>
+
+    <target name="phpcb" description="Code browser with PHP_CodeBrowser">
+        <exec
+            command="/usr/bin/phpcb -l ${project.basedir}/build/logs -S php -o ${project.basedir}/build/browser"
+            dir="${project.basedir}"
+            passthru="true"/>
+    </target>
+
+    <target name="abtest" description="Run Apache Benchmark tests on your server(s)">
+        <exec
+            command="ab -n ${abrequests} -c ${abrequests} -w ${project.website}/ > ${project.basedir}/build/logs/abtest.html"
+            dir="${project.basedir}"
+            passthru="true"/>
+    </target>
+    
+    <target name="build" description="Building app">
+        <phingCall target="prepare" />
+        <phingCall target="phplint" />
+        <phingCall target="phpunit" />
+        <phingCall target="phpdoc2" />
+        <phingCall target="phpcs" />
+        <phingCall target="phpcpd" />
+        <phingCall target="phpmd" />
+        <phingCall target="pdepend" />
+        <phingCall target="phpcb" />
+    </target>
+    
+    <target name="dbdeploy" description="Update the database to the latest version">
+        <dbdeploy 
+            url="mysql:host=${db.hostname};dbname=${db.dbname}"
+            userid="${db.username}"
+            password="${db.password}"
+            dir="${project.basedir}/${dbdeploy.scripts}/deltas"
+            outputfile="${project.basedir}/${dbdeploy.scripts}/all-deltas.sql"    
+            undooutputfile="${project.basedir}/${dbdeploy.scripts}/undo-all-deltas.sql"/>
+        <pdosqlexec 
+            url="mysql:host=${db.hostname};dbname=${db.dbname}" 
+            userid="${db.username}" 
+            password="${db.password}" 
+            src="${project.basedir}/${dbdeploy.scripts}/all-deltas.sql"/>
+    </target>
+</project>

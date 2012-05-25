@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Feed/Writer/Renderer/Feed
+END
+Atom.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Feed/Writer/Renderer/Feed/Atom.php
+END
+Rss.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Feed/Writer/Renderer/Feed/Rss.php
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Tool/Project/Context
+END
+Exception.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Tool/Project/Context/Exception.php
+END
+Repository.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Tool/Project/Context/Repository.php
+END
+Interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Tool/Project/Context/Interface.php
+END

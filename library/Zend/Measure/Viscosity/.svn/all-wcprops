@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Measure/Viscosity
+END
+Dynamic.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Measure/Viscosity/Dynamic.php
+END
+Kinematic.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Measure/Viscosity/Kinematic.php
+END

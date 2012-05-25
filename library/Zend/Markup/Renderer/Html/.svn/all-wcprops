@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Markup/Renderer/Html
+END
+Code.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Markup/Renderer/Html/Code.php
+END
+List.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Markup/Renderer/Html/List.php
+END
+Img.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Markup/Renderer/Html/Img.php
+END
+Url.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Markup/Renderer/Html/Url.php
+END
+HtmlAbstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Markup/Renderer/Html/HtmlAbstract.php
+END

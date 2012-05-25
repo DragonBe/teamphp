@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Analysis/Analyzer/Common
+END
+Text.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Analysis/Analyzer/Common/Text.php
+END
+TextNum.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Analysis/Analyzer/Common/TextNum.php
+END
+Utf8.php
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Analysis/Analyzer/Common/Utf8.php
+END
+Utf8Num.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Analysis/Analyzer/Common/Utf8Num.php
+END

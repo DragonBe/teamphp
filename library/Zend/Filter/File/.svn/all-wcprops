@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Filter/File
+END
+Decrypt.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Filter/File/Decrypt.php
+END
+Encrypt.php
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Filter/File/Encrypt.php
+END
+LowerCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Filter/File/LowerCase.php
+END
+Rename.php
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Filter/File/Rename.php
+END
+UpperCase.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Filter/File/UpperCase.php
+END

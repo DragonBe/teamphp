@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Service/Amazon/Ec2/Instance
+END
+Windows.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Service/Amazon/Ec2/Instance/Windows.php
+END
+Reserved.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Service/Amazon/Ec2/Instance/Reserved.php
+END

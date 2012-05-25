@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Feed/Reader/Extension/Podcast
+END
+Entry.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Feed/Reader/Extension/Podcast/Entry.php
+END
+Feed.php
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Feed/Reader/Extension/Podcast/Feed.php
+END

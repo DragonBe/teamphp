@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search
+END
+QueryHit.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search/QueryHit.php
+END
+QueryParserException.php
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search/QueryParserException.php
+END
+QueryParser.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search/QueryParser.php
+END
+Query.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search/Query.php
+END
+QueryLexer.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search/QueryLexer.php
+END
+QueryToken.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search/QueryToken.php
+END
+Similarity.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search/Similarity.php
+END
+BooleanExpressionRecognizer.php
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search/BooleanExpressionRecognizer.php
+END
+QueryEntry.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search/QueryEntry.php
+END
+QueryParserContext.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search/QueryParserContext.php
+END
+Weight.php
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Search/Weight.php
+END

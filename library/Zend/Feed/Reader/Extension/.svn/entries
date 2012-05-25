@@ -1,0 +1,123 @@
+10
+
+dir
+24514
+http://framework.zend.com/svn/framework/standard/tags/release-1.11.11/library/Zend/Feed/Reader/Extension
+http://framework.zend.com/svn/framework
+
+
+
+2011-05-03T05:47:39.672290Z
+23953
+ralph
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+44c647ce-9c0f-0410-b52a-842ac1e357ba
+
+Atom
+dir
+
+Syndication
+dir
+
+DublinCore
+dir
+
+Thread
+dir
+
+Content
+dir
+
+Slash
+dir
+
+EntryAbstract.php
+file
+
+
+
+
+2011-10-20T06:24:19.000000Z
+2b744bc9a9d1f8a43ba3fd4f2aca34df
+2011-05-03T05:47:39.672290Z
+23953
+ralph
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4621
+
+Podcast
+dir
+
+FeedAbstract.php
+file
+
+
+
+
+2011-10-20T06:24:19.000000Z
+b2ae017e420166276243cb36e065e549
+2011-05-03T05:47:39.672290Z
+23953
+ralph
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4032
+
+CreativeCommons
+dir
+
+WellFormedWeb
+dir
+

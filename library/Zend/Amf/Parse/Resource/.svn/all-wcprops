@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Amf/Parse/Resource
+END
+Stream.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Amf/Parse/Resource/Stream.php
+END
+MysqliResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Amf/Parse/Resource/MysqliResult.php
+END
+MysqlResult.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Amf/Parse/Resource/MysqlResult.php
+END

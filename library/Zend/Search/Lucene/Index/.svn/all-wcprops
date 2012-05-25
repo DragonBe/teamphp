@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Index
+END
+DictionaryLoader.php
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Index/DictionaryLoader.php
+END
+Writer.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Index/Writer.php
+END
+DocsFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Index/DocsFilter.php
+END
+SegmentInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Index/SegmentInfo.php
+END
+FieldInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Index/FieldInfo.php
+END
+SegmentWriter.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Index/SegmentWriter.php
+END
+TermsPriorityQueue.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Index/TermsPriorityQueue.php
+END
+TermInfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Index/TermInfo.php
+END
+SegmentMerger.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Index/SegmentMerger.php
+END
+Term.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/framework/!svn/ver/24484/standard/tags/release-1.11.11/library/Zend/Search/Lucene/Index/Term.php
+END
