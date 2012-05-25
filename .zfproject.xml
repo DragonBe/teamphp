@@ -28,6 +28,7 @@
               <actionMethod actionName="index"/>
               <actionMethod actionName="auth"/>
               <actionMethod actionName="verify"/>
+              <actionMethod actionName="showAccount"/>
             </controllerFile>
             <controllerFile controllerName="Register">
               <actionMethod actionName="index"/>
@@ -54,6 +55,9 @@
               </viewControllerScriptsDirectory>
               <viewControllerScriptsDirectory forControllerName="Register">
                 <viewScriptFile forActionName="index"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Index">
+                <viewScriptFile forActionName="showAccount"/>
               </viewControllerScriptsDirectory>
             </viewScriptsDirectory>
             <viewHelpersDirectory/>
@@ -114,6 +118,7 @@
                 <testApplicationActionMethod forActionName="index"/>
                 <testApplicationActionMethod forActionName="auth"/>
                 <testApplicationActionMethod forActionName="verify"/>
+                <testApplicationActionMethod forActionName="showAccount"/>
               </testApplicationControllerFile>
             </testApplicationControllerDirectory>
           </testApplicationModuleDirectory>
