@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<nav>
+		<home>
+			<label>Home</label>
+			<uri>/</uri>
+		</home>
+		<register>
+			<label>Create a new account</label>
+			<uri>/account/register</uri>
+		</register>
+	</nav>
+</config>
