@@ -7,7 +7,7 @@
 		</home>
 		<register>
 			<label>Create a new account</label>
-			<uri>/account/register</uri>
+			<uri>/account/index/auth</uri>
 		</register>
 	</nav>
 </config>
