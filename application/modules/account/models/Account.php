@@ -9,7 +9,9 @@ class Account_Model_Account extends In2it_Model_Model
     
     public function parseToken(Zend_Oauth_Token_Access $token)
     {
-        $this->setTwitterId($token->_id);
+        $this->setTwitterId($token->getParam('user_id'))
+             ->setTwitterName($token->getParam('screen_name'))
+             ->setToken($token);
     }
     
     public function setId($id)
