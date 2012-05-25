@@ -70,7 +70,7 @@ class Account_IndexController extends Zend_Controller_Action
             'username' => $token->getParam('screen_name'),
             'accessToken' => $token,
         ), $consumer);
-        $timeLine = $twitter->statusPublicTimeline();
+        $timeLine = $twitter->statusUserTimeline(array ('user_id' => $token->getParam('user_id')));
         var_dump($timeLine);
     }
 
