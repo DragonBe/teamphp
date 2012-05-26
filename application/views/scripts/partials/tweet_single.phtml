@@ -1,12 +1,17 @@
+<?php
+$created = new DateTime($this->created_at);
+$now = new DateTime();
+$diff = $now->diff($created, $absolute);
+?>
 <div class="tweet_single">
-	<table class="table table-bordered">
-		<tr>
-			<td rowspan="3">Logo</td>
-			<td><?php echo $this->escape($this->text);?></td>
-			<td>Time_ago</td>
-		</tr>
-		<tr>
-			<td colspan="2">Tweet</td>
-		</tr>
-	</table>
+    <table class="table table-bordered">
+        <tr>
+                <td rowspan="3" width="35"><img src="<?php echo $this->user->profile_image_url ?>" alt="<?php echo $this->escape($this->user->name)?>" width="32" height="32"/></td>
+                <td><?php echo $this->escape($this->text);?></td>
+                <td><?php echo $timeSince ?></td>
+        </tr>
+        <tr>
+                <td colspan="2">Tweet</td>
+        </tr>
+    </table>
 </div>

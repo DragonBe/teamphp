@@ -1,29 +1,30 @@
+<?php var_dump($this->tweets); ?>
 <div class="row">
-	<div class="span12">
-		<ul>
-			<li><a href=""><img src="" alt="account #1" /></a></li>
-			<li><a href=""><img src="" alt="account #2" /></a></li>
-		</ul>
-	</div>
+    <div class="span12">
+        <ul>
+            <li><a href=""><img src="" alt="account #1" /></a></li>
+            <li><a href=""><img src="" alt="account #2" /></a></li>
+        </ul>
+    </div>
 </div>
 <div class="row">
-	<div class="span2">Super Left side.</div>
-	<div class="span5">
-		<?php
-		if (isset ( $this->tweets )) {
-			echo $this->partial ( 'partials/tweet_block.phtml', array (
-					'tweets' => $this->tweets
-			) );
-		} else {
-			echo "no tweets to display,";
-		}
-		?>
-	</div>
-	<div class="span5">
-		<div class="detail">Detailed information goes here about the selected
-			person, message, or whatever.</div>
-		<hr />
-		<div class="profile">Profile stats here about the person that said
-			whatever was said. If they were</div>
-	</div>
+    <div class="span2">Super Left side.</div>
+    <div class="span5">
+        <?php
+        if (isset ( $this->tweets )) {
+            echo $this->partial ( 'partials/tweet_block.phtml', array (
+                            'tweets' => $this->tweets
+            ) );
+        } else {
+            echo "no tweets to display,";
+        }
+        ?>
+    </div>
+    <div class="span5">
+        <div class="detail">Detailed information goes here about the selected
+                person, message, or whatever.</div>
+        <hr />
+        <div class="profile">Profile stats here about the person that said
+                whatever was said. If they were</div>
+    </div>
 </div>
