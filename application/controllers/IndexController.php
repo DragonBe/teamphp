@@ -31,6 +31,9 @@ class IndexController extends Zend_Controller_Action
         $consumer = $account->getConsumer();
 
         $token = unserialize($this->_session->ACCESSTOKEN);
+        
+        // initializing variables first, just in case we have no values
+        $timeLine = $directMessages = array ();
         if ($token != null) {
             $twitter = new Zend_Service_Twitter(
                     array(
@@ -41,11 +44,19 @@ class IndexController extends Zend_Controller_Action
                     array(
                             'user_id' => $token->getParam('user_id')
                     ));
+            $directMessages = $twitter->directMessageMessages(array (
+                array (
+                    'user_id' => $token->getParam('user_id'),
+                ),
+            ));
         }
         // var_dump($token);die;
 
         if (isset($timeLine)) {
-            $this->view->tweets = $timeLine;
+            $this->view->assign(array (
+                'tweets' => $timeLine,
+                'directMessages' => $directMessages,
+            ));
         }
     }
 }

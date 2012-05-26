@@ -17,17 +17,30 @@
 			</ul>
 			<div id="social_channel_tabs_timeline">
 			<?php
-if (isset($this->tweets)) {
+if (!empty($this->tweets)) {
     echo $this->partial('partials/tweet_block.phtml',
             array(
-                    'tweets' => $this->tweets
+                    'tweets' => $this->tweets,
             ));
 } else {
     echo "no tweets to display,";
 }
 ?>
 			</div>
-			<div id="social_channel_tabs_DMs"></div>
+			<div id="social_channel_tabs_DMs">
+                            
+                            <?php
+if (!empty($this->directMessages)) {
+    echo $this->partial('partials/tweet_block.phtml',
+            array(
+                    'tweets' => $this->directMessages,
+            ));
+} else {
+    echo "no tweets to display,";
+}
+?>
+                            
+                        </div>
 		</div>
 		<script type="text/javascript">
 		$(document).ready(function () {
