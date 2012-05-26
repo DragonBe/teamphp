@@ -1,14 +1,29 @@
 <?php
 $created = new DateTime($this->created_at);
 $now = new DateTime();
-$diff = $now->diff($created, $absolute);
+$diff = $now->diff($created);
+if (0 < $diff->y) {
+    $timeSince = sprintf('%dy ago', $diff->y);
+} elseif (0 < $diff->m) {
+    $timeSince = sprintf('%d month(s) ago', $diff->m);
+} elseif (0 < $diff->d) {
+    $timeSince = sprintf('%dd ago', $diff->d);
+} elseif (0 < $diff->h) {
+    $timeSince = sprintf('%dh ago', $diff->h);
+} elseif (0 < $diff->i) {
+    $timeSince = sprintf('%dm ago', $diff->i);
+} elseif (0 < $diff->s) {
+    $timeSince = sprintf('%ds ago', $diff->s);
+} else {
+    $timeSince = 'just now';
+}
 ?>
 <div class="tweet_single">
     <table class="table table-bordered">
         <tr>
                 <td rowspan="3" width="35"><img src="<?php echo $this->user->profile_image_url ?>" alt="<?php echo $this->escape($this->user->name)?>" width="32" height="32"/></td>
                 <td><?php echo $this->escape($this->text);?></td>
-                <td><?php echo $timeSince ?></td>
+                <td width="60"><?php echo $timeSince ?></td>
         </tr>
         <tr>
                 <td colspan="2">Tweet</td>
