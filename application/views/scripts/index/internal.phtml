@@ -2,9 +2,8 @@
 <div class="row">
 	<div class="span12">
 		<div class="social_channel_block">
-			<ul>
-				<li><a href=""><img src="" alt="account #1" /></a></li>
-				<li><a href=""><img src="" alt="account #2" /></a></li>
+			<ul class="account_listing">
+				<li><a href="" title="<?php echo $this->escape($this->account->name) ?>"><img src="<?php echo $this->account->profile_image_url ?>" alt="<?php echo $this->escape($this->account->screen_name) ?>" /></a></li>
 			</ul>
 		</div>
 	</div>

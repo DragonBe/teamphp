@@ -20,14 +20,8 @@ class IndexController extends Zend_Controller_Action
      */
     public function internalAction ()
     {
-        $config = new Zend_Config(
-                array(
-                        'callbackUrl' => 'http://teamphp.local/auth/index/twitter-success',
-                        'siteUrl' => 'http://twitter.com/oauth',
-                        'consumerKey' => 'zr18H5PVztiRqlxDIFGTg',
-                        'consumerSecret' => 'iBlZj32wlKj6w0jD2rnQnatAOSGiEertAWz2NrnuC9I'
-                ));
-        $account = new Account_Service_Account($config);
+        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/app.ini', APPLICATION_ENV);
+        $account = new Account_Service_Account($config->twitter);
         $consumer = $account->getConsumer();
 
         $token = unserialize($this->_session->ACCESSTOKEN);
@@ -40,6 +34,10 @@ class IndexController extends Zend_Controller_Action
                             'username' => $token->getParam('screen_name'),
                             'accessToken' => $token
                     ), $consumer);
+            
+            // get the user's profile first
+            $profile = $twitter->accountVerifyCredentials();
+            
             $timeLine = $twitter->statusUserTimeline(
                     array(
                             'user_id' => $token->getParam('user_id')
@@ -54,6 +52,7 @@ class IndexController extends Zend_Controller_Action
 
         if (isset($timeLine)) {
             $this->view->assign(array (
+                'account' => $profile,
                 'tweets' => $timeLine,
                 'directMessages' => $directMessages,
             ));
