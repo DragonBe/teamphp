@@ -2,3 +2,5 @@
 /nbproject
 /nbproject/private/
 /.project
+/data/cache/zend_cache*
+/data/logs/application.log
