@@ -17,13 +17,8 @@ class Account_IndexController extends Zend_Controller_Action
 
     public function authAction()
     {
-        $config = new Zend_Config(array (
-            'callbackUrl'    => 'http://teamphp.local/account/index/verify',
-            'siteUrl'        => 'http://twitter.com/oauth',
-            'consumerKey'    => 'zr18H5PVztiRqlxDIFGTg',
-            'consumerSecret' => 'iBlZj32wlKj6w0jD2rnQnatAOSGiEertAWz2NrnuC9I',
-        ));
-        $account = new Account_Service_Account($config);
+        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/app.ini', APPLICATION_ENV);
+        $account = new Account_Service_Account($config->twitter);
         $token = $account->authAccount();
         $this->_session->REQTOKEN = serialize($token);
         unset ($this->_session->ACCESSTOKEN);
@@ -33,14 +28,9 @@ class Account_IndexController extends Zend_Controller_Action
     public function verifyAction()
     {
         if (!isset ($this->_session->ACCESSTOKEN)) {
-            $config = new Zend_Config(array (
-                'callbackUrl'    => 'http://teamphp.local/auth/index/twitter-success',
-                'siteUrl'        => 'http://twitter.com/oauth',
-                'consumerKey'    => 'zr18H5PVztiRqlxDIFGTg',
-                'consumerSecret' => 'iBlZj32wlKj6w0jD2rnQnatAOSGiEertAWz2NrnuC9I',
-            ));
+            $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/app.ini', APPLICATION_ENV);
             $requestToken = unserialize($this->_session->REQTOKEN);
-            $account = new Account_Service_Account($config);
+            $account = new Account_Service_Account($config->twitter);
             $token = $account->verifyAccount($this->getRequest(), $requestToken);
             $this->_session->ACCESSTOKEN = serialize($token);
         }
@@ -56,13 +46,8 @@ class Account_IndexController extends Zend_Controller_Action
 
     public function showAccountAction()
     {
-        $config = new Zend_Config(array (
-            'callbackUrl'    => 'http://teamphp.local/auth/index/twitter-success',
-            'siteUrl'        => 'http://twitter.com/oauth',
-            'consumerKey'    => 'zr18H5PVztiRqlxDIFGTg',
-            'consumerSecret' => 'iBlZj32wlKj6w0jD2rnQnatAOSGiEertAWz2NrnuC9I',
-        ));
-        $account = new Account_Service_Account($config);
+        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/app.ini', APPLICATION_ENV);
+        $account = new Account_Service_Account($config->twitter);
         $consumer = $account->getConsumer();
         $token = unserialize($this->_session->ACCESSTOKEN);
 //        var_dump($token);die;
