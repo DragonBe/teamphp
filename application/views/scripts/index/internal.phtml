@@ -29,9 +29,10 @@ if (!empty($this->tweets)) {
 			</div>
 			<div id="social_channel_tabs_DMs">
                             
+                            
                             <?php
 if (!empty($this->directMessages)) {
-    echo $this->partial('partials/tweet_block.phtml',
+    echo $this->partial('partials/tweet_block_direct.phtml',
             array(
                     'tweets' => $this->directMessages,
             ));

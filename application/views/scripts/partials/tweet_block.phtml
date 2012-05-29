@@ -1,4 +1,5 @@
 <div class="tweet_block">
     <h2>Recent Tweets</h2>
+    <?php //var_dump($this->tweets); ?>
     <?php echo $this->partialLoop ( 'partials/tweet_single.phtml', null, $this->tweets ); ?>
 </div>
