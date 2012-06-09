@@ -4,13 +4,13 @@ class Account_Model_Account extends In2it_Model_Model
 {
     protected $_id;
     protected $_twitterId;
-    protected $_twitterName;
+    protected $_screenName;
     protected $_token;
     
     public function parseToken(Zend_Oauth_Token_Access $token)
     {
         $this->setTwitterId($token->getParam('user_id'))
-             ->setTwitterName($token->getParam('screen_name'))
+             ->setScreenName($token->getParam('screen_name'))
              ->setToken($token);
     }
     
@@ -32,14 +32,14 @@ class Account_Model_Account extends In2it_Model_Model
     {
         return $this->_twitterId;
     }
-    public function setTwitterName($twitterName)
+    public function setScreenName($screenName)
     {
-        $this->_twitterName = (string) $twitterName;
+        $this->_screenName = (string) $screenName;
         return $this;
     }
-    public function getTwitterName()
+    public function getScreenName()
     {
-        return $this->_twitterName;
+        return $this->_screenName;
     }
     public function setToken(Zend_Oauth_Token_Access $token)
     {
@@ -61,8 +61,8 @@ class Account_Model_Account extends In2it_Model_Model
         if (isset ($row->twitterId)) {
             $this->setTwitterId($row->twitterId);
         }
-        if (isset ($row->twitterName)) {
-            $this->setTwitterName($row->twitterName);
+        if (isset ($row->screenName)) {
+            $this->setScreenName($row->screenName);
         }
         if (isset ($row->token)) {
             $this->setToken(unserialize($row->token));
@@ -73,7 +73,7 @@ class Account_Model_Account extends In2it_Model_Model
         return array (
             'id' => $this->getId(),
             'twitterId' => $this->getTwitterId(),
-            'twitterName' => $this->getTwitterName(),
+            'screenName' => $this->getScreenName(),
             'token' => serialize($this->getToken()),
         );
     }
