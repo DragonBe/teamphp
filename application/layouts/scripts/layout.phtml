@@ -1,84 +1,78 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<?php echo $this->headTitle('TeamPHP')->setSeparator(' - '); ?>
-<meta name="description" content="">
-<meta name="author" content="">
-<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<!-- <link rel="stylesheet" href="/css/style.css"> -->
-<link rel="stylesheet"
-	href="/css/themes/cupertino/jquery-ui-1.8.16.custom.css">
-<link rel="stylesheet" href="/css/Wijmo/jquery.wijmo-open.2.0.0.css">
-<link rel="stylesheet" href="/css/Twitter/2.0/bootstrap.min.css">
-<link rel="stylesheet" href="/css/main.css">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle(); ?>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!-- <link rel="stylesheet" href="/css/style.css"> -->
+        <link rel="stylesheet"
+              href="/css/themes/cupertino/jquery-ui-1.8.16.custom.css">
+        <link rel="stylesheet" href="/css/Wijmo/jquery.wijmo-open.2.0.0.css">
+        <link rel="stylesheet" href="/css/Twitter/2.0/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/main.css">
 
-<script src="/js/JQuery/jquery-1.7.1.min.js"></script>
-<script src="/js/JQueryUI/jquery-ui-1.8.17.custom.min.js"></script>
-<script src="/js/Twitter/2.0/bootstrap-tooltip.js"></script>
-<script src="/js/Wijmo/jquery.wijmo-open.all.2.0.0.min.js"></script>
-</head>
-<body>
-	<div class="container">
-		<div class="row header_outer">
-			<div class="span6">
-				<div class="logo">
-					<a href="/"></a>
-				</div>
-			</div>
-			<div class="span6 menu">
-					 <?php
-						/*
-						 * $this->navigation ()->setAcl (
-						 * Zend_Registry::getInstance ()->get ( 'Zend_Acl' )
-						 * )->setRole ( Zend_Auth::getInstance ()->getIdentity
-						 * () ); if (\Zend_Auth::getInstance ()->hasIdentity ())
-						 * { /** $page = \Zend_Navigation_Page::factory ( (array
-						 * ( 'label' => 'Logout', 'uri' => '/logout' )) );
-						 * $this->navigation ()->addPage ( $page );*
-						 */
-					 /*
-						} else {
-						/**
-						 * $page = \Zend_Navigation_Page::factory ( (array (
-						 * 'label' => 'login',
-						 * 'uri' => '/login'
-						 * )) );
-						 * $this->navigation ()->addPage ( $page );
-						 */
+        <script src="/js/JQuery/jquery-1.7.1.min.js"></script>
+        <script src="/js/JQueryUI/jquery-ui-1.8.17.custom.min.js"></script>
+        <script src="/js/Twitter/2.0/bootstrap-tooltip.js"></script>
+        <script src="/js/Wijmo/jquery.wijmo-open.all.2.0.0.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row header_outer">
+                <div class="span6">
+                    <div class="logo">
+                        <a href="/"></a>
+                    </div>
+                </div>
+                <div class="span6 menu">
+                    <?php
+                    /*
+                     * $this->navigation ()->setAcl (
+                     * Zend_Registry::getInstance ()->get ( 'Zend_Acl' )
+                     * )->setRole ( Zend_Auth::getInstance ()->getIdentity
+                     * () ); if (\Zend_Auth::getInstance ()->hasIdentity ())
+                     * { /** $page = \Zend_Navigation_Page::factory ( (array
+                     * ( 'label' => 'Logout', 'uri' => '/logout' )) );
+                     * $this->navigation ()->addPage ( $page );*
+                     */
+                    /*
+                      } else {
+                      /**
+                     * $page = \Zend_Navigation_Page::factory ( (array (
+                     * 'label' => 'login',
+                     * 'uri' => '/login'
+                     * )) );
+                     * $this->navigation ()->addPage ( $page );
+                     */
 
-						//}
-
-
-						$menu = $this->navigation ()->menu ();
-						$menu->setUlClass ( "menu" );
-						echo $menu;
+                    //}
 
 
-						?>
-								</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="span12">
-    	        <?php echo $this->layout()->content; ?>
+                    $menu = $this->navigation()->menu();
+                    $menu->setUlClass("menu");
+                    echo $menu;
+                    ?>
+                </div>
             </div>
-		</div>
-	</div>
-	<div class="container footer">
-		<div class="row">
-			<div class="span12">
-				<footer class="center">
-					<p>
-						<small>@Hackathon - Powered by <a href="http://engineyard.com" title="Engine Yard / Orchestra">Engine Yard / Orchestra</a></small>
-					</p>
-				</footer>
-			</div>
-		</div>
-	</div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+<?php echo $this->layout()->content; ?>
+                </div>
+            </div>
+        </div>
+        <div class="container footer">
+            <div class="row">
+                <div class="span12">
+<?php echo $this->render('footer.phtml'); ?>
+                </div>
+            </div>
+        </div>
 
 
-</body>
+    </body>
 </html>
