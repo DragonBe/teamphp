@@ -23,5 +23,3 @@ Running code
 ------------
 
 You can find the running code now at http://teamphp.orchestra.io
-
-Need to find time to update
